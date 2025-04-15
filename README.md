@@ -18,3 +18,19 @@ Before you begin, ensure you have the following installed:
    git clone https://github.com/mdelgert/PythonDevContainer.git
    cd PythonDevContainer
    ```
+
+2. Open the repository in Visual Studio Code.
+
+3. Reopen the folder in a development container:
+   - Press `F1` to open the Command Palette.
+   - Search for and select `Dev Containers: Reopen in Container`.
+
+4. Once the container is ready, open a terminal in Visual Studio Code and run Python scripts as needed:
+   ```bash
+   python your_script.py
+   ```
+
+5. To install additional Python packages, use `pip`:
+   ```bash
+   pip install package_name
+   ```
