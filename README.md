@@ -27,7 +27,7 @@ Before you begin, ensure you have the following installed:
 
 4. Once the container is ready, open a terminal in Visual Studio Code and run Python scripts as needed:
    ```bash
-   python your_script.py
+   python example.py
    ```
 
 5. To install additional Python packages, use `pip`:
