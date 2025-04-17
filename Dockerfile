@@ -17,6 +17,9 @@ COPY src/ .
 RUN useradd -m demo
 USER demo
 
+# Set environment variable to disable output buffering
+ENV PYTHONUNBUFFERED=1
+
 # Command to run the application
 CMD ["python", "main.py"]
 
