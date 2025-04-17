@@ -13,6 +13,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the project
 COPY src/ .
 
+# Add a label to include the README.md content in the Docker Hub overview
+LABEL org.opencontainers.image.description="$(cat README.md)"
+
 # Create a non-root user for security (optional but recommended)
 RUN useradd -m demo
 USER demo

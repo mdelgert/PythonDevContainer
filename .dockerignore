@@ -1,0 +1,10 @@
+# .dockerignore
+
+# Ignore everything by default
+*
+
+# Allow the src directory
+!src/
+
+# Allow the requirements.txt file
+!requirements.txt

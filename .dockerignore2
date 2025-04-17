@@ -1,0 +1,27 @@
+# Exclude version control files
+.git
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environment directories
+venv/
+.env/
+
+# Node modules (if applicable)
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Other unnecessary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Exclude workspace-specific files
+.vscode/
+.devcontainer/
