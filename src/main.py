@@ -13,7 +13,7 @@ def main():
 
     print(python_ascii_art)
     #print(f"Version: {sys.version}")
-    print("Version 1.1")
+    print("Version 1.0")
 
     # for i in range(5):
     #     print(f"Hello Python {i + 1}!")
