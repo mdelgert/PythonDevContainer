@@ -1,11 +1,24 @@
 import time
+import sys
 
 def main():
-    for i in range(5):
-        #print("Hello Python!")
-        print(f"Hello Python {i + 1}!")
-        time.sleep(1)
-        
+    python_ascii_art = """
+     ____        _   _                  _
+    |  _ \ _   _| |_| |__   ___  _ __  | |
+    | |_) | | | | __| '_ \ / _ \| '_ \ | |
+    |  __/| |_| | |_| | | | (_) | | | ||_|
+    |_|    \__, |\__|_| |_|\___/|_| |_|(_)
+           |___/                          
+    """
+
+    print(python_ascii_art)
+    print(f"Version: {sys.version}")
+    # print("Version 1.0")
+
+    # for i in range(5):
+    #     print(f"Hello Python {i + 1}!")
+    #     time.sleep(1)
+
 if __name__ == "__main__":
     main()
 
