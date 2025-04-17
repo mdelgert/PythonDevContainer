@@ -8,3 +8,6 @@
 
 # Allow the requirements.txt file
 !requirements.txt
+
+# Allow the README.md file
+!README.md
