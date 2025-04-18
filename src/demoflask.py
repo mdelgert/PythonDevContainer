@@ -39,7 +39,7 @@ def index():
     </head>
     <body>
         <div>
-            <h1>Welcome to the Dark Theme Page</h1>
+            <h1>Welcome to Flask demo Page</h1>
             <p>This is a simple web page with a dark theme.</p>
             <p><a href="https://flask.palletsprojects.com/">Learn more about Flask</a></p>
         </div>
