@@ -1,8 +1,5 @@
-Below is a simple Python FastAPI application that serves a dark-themed webpage. The webpage is a single HTML file styled with Tailwind CSS for a clean, modern dark theme. The FastAPI backend handles the route to serve the webpage.
-
-```python
 from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, JSONResponse
 
 app = FastAPI()
 
@@ -23,40 +20,33 @@ async def read_root():
             <p class="text-lg mb-6 text-gray-300 text-center">
                 This is a simple dark-themed webpage served by FastAPI.
             </p>
-            <div class="flex justify-center">
+            <div class="flex justify-center mb-4">
                 <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300">
                     Click Me
                 </button>
+            </div>
+            <div class="text-center">
+                <a href="/sample-json" class="text-blue-400 hover:underline">
+                    View Sample JSON Response
+                </a>
             </div>
         </div>
     </body>
     </html>
     """
     return HTMLResponse(content=html_content)
-```
 
-To run this FastAPI application, you'll need to:
-
-1. Install the required dependencies:
-   ```bash
-   pip install fastapi uvicorn
-   ```
-
-2. Save the code in a file named `main.py`.
-
-3. Run the application using:
-   ```bash
-   uvicorn main:app --reload
-   uvicorn demofastapi1:app --reload
-   uvicorn demofastapi2:app --reload
-   ```
-
-4. Open your browser and navigate to `http://127.0.0.1:8000` to view the dark-themed webpage.
-
-The webpage features:
-- A dark background with light text for readability.
-- A centered card-like container with a subtle shadow.
-- A bold heading and descriptive text.
-- A styled button with hover effects, all using Tailwind CSS for responsive design.
-
-Let me know if you need additional features or modifications!
+@app.get("/sample-json", response_class=JSONResponse)
+async def get_sample_json():
+    sample_data = {
+        "message": "This is a sample JSON response",
+        "data": {
+            "id": 1,
+            "name": "Example User",
+            "email": "user@example.com",
+            "roles": ["admin", "user"],
+            "active": True
+        },
+        "timestamp": "2025-04-17T12:00:00Z"
+    }
+    return JSONResponse(content=sample_data)
