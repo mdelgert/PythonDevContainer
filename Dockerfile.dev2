@@ -26,9 +26,7 @@ WORKDIR /workspace
 COPY . /workspace
 
 # Install dependencies
-#RUN pip install --no-cache-dir -r /workspace/requirements.txt
-#RUN pip install --no-cache-dir --force-reinstall -r /workspace/requirements.txt
-RUN pip install flask --force-reinstall --no-dependencies -r /workspace/requirements.txt
+#RUN pip install --no-cache-dir -r requirements.txt
 
-# Flask error force install
-#pip install flask --force-reinstall --no-dependencies
+# Install dependencies with override flag
+RUN pip3 install --no-cache-dir --break-system-packages -r requirements.txt
