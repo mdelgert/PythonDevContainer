@@ -2,7 +2,7 @@ import time
 import sys
 
 def main():
-    python_ascii_art = """
+    python_ascii_art = r"""
      ____        _   _                  _
     |  _ \ _   _| |_| |__   ___  _ __  | |
     | |_) | | | | __| '_ \ / _ \| '_ \ | |
