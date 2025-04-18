@@ -16,7 +16,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Copy the Flask application file
-COPY /src/demoflask.py .
+COPY /src/demoflask1.py .
 
 # Install Python dependencies
 #RUN pip3 install --no-cache-dir -r requirements.txt
@@ -28,4 +28,4 @@ RUN pip3 install --no-cache-dir --break-system-packages -r requirements.txt
 EXPOSE 5000
 
 # Define the default command to run the Flask app
-CMD ["python3", "demoflask.py"]
+CMD ["python3", "demoflask1.py"]
