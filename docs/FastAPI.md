@@ -50,6 +50,7 @@ To run this FastAPI application, you'll need to:
    uvicorn demofastapi1:app --reload
    uvicorn demofastapi2:app --reload
    uvicorn demofastapi3:app --reload
+   uvicorn api:app --reload
    ```
 
 4. Open your browser and navigate to `http://127.0.0.1:8000` to view the dark-themed webpage.
