@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     # Render the HTML from the templates directory
-    return render_template('index.html')
+    return render_template('flask.html')
 
 if __name__ == '__main__':
     # Run the Flask app on localhost and port 5000
